@@ -1,0 +1,28 @@
+body {
+  background-color: $gray-f8;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.show-768 {
+  display: none;
+}
+
+.show-1366 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .show-768 {
+    display: block;
+  }
+}
+
+@media (min-width: 1366px) {
+  .show-1366 {
+    display: block;
+  }
+}

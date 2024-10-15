@@ -1,0 +1,95 @@
+.circle {
+  display: flex;
+  background-image: url(../img/pink-round.svg);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle,
+.circle__burger,
+.circle__settings,
+.circle__search,
+.circle__phone,
+.circle__message,
+.circle__person {
+  background-repeat: no-repeat;
+}
+
+.circle__burger {
+  background-image: url(../img/burger-menu.svg);
+  width: 18px;
+  height: 16px;
+}
+
+.circle__settings {
+  background-image: url(../img/settings.svg);
+  width: 20px;
+  height: 20px;
+}
+
+.circle__search {
+  background-image: url(../img/loop-2.svg);
+  width: 16px;
+  height: 20px;
+}
+
+.circle__phone {
+  background-image: url(/src/img/phone.svg);
+  width: 18px;
+  height: 18px;
+}
+
+.circle__message {
+  background-image: url(/src/img/message.svg);
+  width: 20px;
+  height: 20px;
+}
+
+.circle__person {
+  background-image: url(/src/img/person.svg);
+  width: 20px;
+  height: 18px;
+}
+
+.button-circle {
+  display: flex;
+  background-image: url(../img/round-button.svg);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-circle--down {
+  transform: translateY(100px);
+}
+
+.toggle-btn {
+  margin-left: 15px;
+  margin-top: 15px;
+  border: 0;
+  background-color: $gray-f8;
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+.oval {
+  display: flex;
+  background-image: url(../img/oval.svg);
+  width: 119px;
+  height: 32px;
+  border-radius: 16px 0px 0px 0px;
+  transform: translate(105px, -45px);
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.oval__link {
+  background-image: url(../img/white-arrow.svg);
+  width: 7px;
+  height: 9.63px;
+}

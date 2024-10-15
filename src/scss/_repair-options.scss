@@ -1,0 +1,20 @@
+.repair-options {
+}
+
+.repair-options__service::before {
+  color: $gray-7e;
+  white-space: pre;
+  content: 'Ремонтные услуги\0a';
+}
+
+.repair-options__price::before {
+  color: $gray-7e;
+  white-space: pre;
+  content: 'Цена\0a';
+}
+
+.repair-options__term::before {
+  color: $gray-7e;
+  white-space: pre;
+  content: 'Срок\0a';
+}
