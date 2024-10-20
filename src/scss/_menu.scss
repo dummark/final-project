@@ -1,0 +1,117 @@
+.company,
+.service-block,
+.price-block {
+  background-color: $white;
+  border: solid 1px $white-gray;
+  padding: 15px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.company,
+.service-block {
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
+}
+
+.company {
+  height: 70px;
+  align-items: center;
+}
+
+.service-block {
+  height: 160px;
+}
+
+.price-block {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 200px;
+
+  &__service::before {
+    color: $gray-7e;
+    white-space: pre;
+    content: 'Ремонтные услуги\0a';
+  }
+
+  &__price::before {
+    color: $gray-7e;
+    white-space: pre;
+    content: 'Цена\0a';
+  }
+
+  &__term::before {
+    color: $gray-7e;
+    white-space: pre;
+    content: 'Срок\0a';
+  }
+}
+
+.text-left {
+  max-width: 430px;
+}
+
+.content-768 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .content-768 {
+    display: flex !important;
+  }
+
+  .company,
+  .service-block {
+    width: 224px;
+  }
+  .hide {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    align-items: center;
+
+    button {
+      font-family: 'TTLakes-thin', sans-serif;
+      text-decoration: none;
+      color: black;
+      font-weight: 900;
+      border: 0;
+      background-color: #f8f8f8;
+    }
+
+    img {
+      padding-left: 40px;
+    }
+  }
+
+  .price-block {
+    flex-direction: row;
+    height: 64px;
+    width: auto;
+    border: 0;
+
+    &__service::before,
+    &__price::before,
+    &__term::before {
+      display: none;
+    }
+
+    &__service {
+      flex-basis: 50%;
+    }
+    &__price {
+      flex-basis: 20%;
+    }
+    &__term {
+      flex-basis: 30%;
+    }
+
+    &__service,
+    &__price,
+    &__term {
+      align-self: center;
+    }
+  }
+}

@@ -15,12 +15,36 @@
   </head>
   <body>
     <header class="header">
-      <div class="circle">
-        <div class="circle__burger hover-opacity"></div>
+      <div class="circle padding">
+        <div class="burger hover-opacity">
+          <span></span>
+        </div>
       </div>
+      <div><img src="./img/separator.svg" alt="разделитель"/></div>
       <div><img src="./img/cps.svg" alt="лого компании" /></div>
-      <div><img src="./img/separator.svg" /></div>
-      <div class="spacer" alt="разделитель"></div>
+      <div class="spacer content-768"></div>
+      <nav class="burger-menu">
+        <ul>
+          <li class="hide-content">Ремонт техники</li>
+          <li class="hide-content">Услуги и сервисы</li>
+          <li class="hide-content">Корпоративным клиентам</li>
+          <li class="hide-content">Продавцам техники</li>
+          <li class="hide-content">Партнерам</li>
+          <li class="hide-content">Производителям</li>
+          <li class="hide-content">Наши сервисные центры</li>
+          <li class="hide-content">Контакты</li>
+          <div class="circle content-768">
+            <div class="circle__phone hover-opacity"></div>
+          </div>
+          <div class="circle content-768">
+            <div class="circle__message hover-opacity"></div>
+          </div>
+          <div class="circle content-768">
+            <div class="circle__person hover-opacity"></div>
+          </div>
+          <div><img src="./img/separator.svg" alt="разделитель"/></div>
+        </ul>
+      </nav>
       <div class="circle">
         <div class="circle__settings hover-opacity"></div>
       </div>
@@ -69,8 +93,8 @@
       <div class="swiper-name">
         <h1 class="uppercase gray-font">Ремонт техники различных брендов</h1>
       </div>
-      <div class="swiper">
-        <div class="swiper-wrapper companies">
+      <div class="swiper swiper-companies">
+        <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="company">
               <img src="img/lenovo.svg" alt="lenovo" />
@@ -140,11 +164,17 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
+      <div class="hide">
+				<button class="toggleButton black-font" onclick="changeImage()">
+          <img class="arrows" src="img/arrows.svg" alt="Показать всё"/>
+					Показать все
+				</button>
+			</div>
       <div class="swiper-name">
         <h1 class="uppercase gray-font">Ремонт различных видов техники</h1>
       </div>
-      <div class="swiper">
-        <div class="swiper-wrapper services black-font">
+      <div class="swiper swiper-services">
+        <div class="swiper-wrapper black-font">
           <div class="swiper-slide ">
             <div class="service-block">
               Ремонт ноутбуков
@@ -212,27 +242,40 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
+      <!-- кнопка не работает , доделать-->
+      <div class="hide">
+				<button class="toggleButton black-font" onclick="changeImage()">
+          <img class="arrows" src="img/arrows.svg" alt="Показать всё"/>
+					Показать все
+				</button>
+			</div>
       <div class="swiper-name">
         <h1 class="uppercase gray-font">Цены на услуги</h1>
       </div>
-      <div class="swiper">
-        <div class="swiper-wrapper prices main-font">
+      <!-- понять что с этой хренью делать <div class="width-768">
+        <div class="price-block__service"></div>
+        <div class="price-block__price"></div>
+        <div class="price-block__term"></div>
+      </div> -->
+      <div class="swiper swiper-prices">
+        <div class="swiper-wrapper main-font">
           <div class="swiper-slide">
-            <div class="price-block repair-options main-font">
-              <div class="repair-options__service">Диагностика</div>
-              <div class="repair-options__price">Бесплатно</div>
-              <div class="repair-options__term">30 мин</div>
+            <div class="price-block main-font">
+              <div class="price-block__service">Диагностика</div>
+              <div class="price-block__price">Бесплатно</div>
+              <div class="price-block__term">30 мин</div>
               <div class="oval hover-opacity">
                 <a href="#" class="white-link uppercase">Заказать</a>
                 <div class="oval__link"></div>
               </div>
             </div>
+<!-- доделать разделитель для слайдов-->
           </div>
           <div class="swiper-slide">
-            <div class="price-block repair-options main-font">
-              <div class="repair-options__service">Замена дисплея</div>
-              <div class="repair-options__price">1 000 ₽</div>
-              <div class="repair-options__term">30-120 мин</div>
+            <div class="price-block main-font">
+              <div class="price-block__service">Замена дисплея</div>
+              <div class="price-block__price">1 000 ₽</div>
+              <div class="price-block__term">30-120 мин</div>
               <div class="oval">
                 <a href="#" class="white-link uppercase">Заказать</a>
                 <div class="oval__link"></div>
@@ -240,10 +283,10 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="price-block repair-options main-font">
-              <div class="repair-options__service">Замена полифонического динамика</div>
-              <div class="repair-options__price">1 000 ₽</div>
-              <div class="repair-options__term">30-120 мин</div>
+            <div class="price-block main-font">
+              <div class="price-block__service">Замена полифонического динамика</div>
+              <div class="price-block__price">1 000 ₽</div>
+              <div class="price-block__term">30-120 мин</div>
               <div class="oval">
                 <a href="#" class="white-link uppercase">Заказать</a>
                 <div class="oval__link"></div>
@@ -251,10 +294,10 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="price-block repair-options main-font">
-              <div class="repair-options__service">Тестирование с выдачей технического заключения</div>
-              <div class="repair-options__price">1 000 ₽</div>
-              <div class="repair-options__term">30-120 мин</div>
+            <div class="price-block main-font">
+              <div class="price-block__service">Тестирование с выдачей технического заключения</div>
+              <div class="price-block__price">1 000 ₽</div>
+              <div class="price-block__term">30-120 мин</div>
               <div class="oval">
                 <a href="#" class="white-link uppercase">Заказать</a>
                 <div class="oval__link"></div>
@@ -262,10 +305,10 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="price-block repair-options main-font">
-              <div class="repair-options__service">Замена программного обеспечения</div>
-              <div class="repair-options__price">1 000 ₽</div>
-              <div class="repair-options__term">30-120 мин</div>
+            <div class="price-block main-font">
+              <div class="price-block__service">Замена программного обеспечения</div>
+              <div class="price-block__price">1 000 ₽</div>
+              <div class="price-block__term">30-120 мин</div>
               <div class="oval">
                 <a href="#" class="white-link uppercase">Заказать</a>
                 <div class="oval__link"></div>
@@ -275,19 +318,19 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <article class="article">
+      <article class="article text-left">
         <h2 class="optional-font ">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</h2>
         <div class="inline-block"><a href="#" class="black-font">Получить коммерческое предложение</a> 
         <img src="img/pink-arrow.svg"></div>
         </article>
     </main>
-    <footer class="footer gray-font">
-      © 2019 CPS
-      Разработано командой Apesong
+    <footer class="footer small-gray-font">
+      <div>© 2019 CPS</div>
+      <div>Разработано командой Apesong</div>
       <p></p>
-      <p>Политика конфиденциальности</p>
+      <div>Политика конфиденциальности</div>
       <p></p>
-      <p>Информация, размещенная на данной странице, не является публичной офертой</p>
+      <div>Информация, размещенная на данной странице, не является публичной офертой</div>
     </footer>
     <script type="module" src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

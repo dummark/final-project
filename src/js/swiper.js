@@ -1,12 +1,34 @@
-var init = false
-var swiper
-function swiperCard() {
-  if (window.innerWidth < 768) {
-    if (!init) {
-      init = true
-      swiper = new Swiper('.swiper', {
+let swiperInstance = null
+
+function resetSwiperStyles() {
+  const swiperSlides = document.querySelectorAll('.swiper-slide')
+  const swiperWrapper = document.querySelector('.swiper-wrapper')
+  const swiperContainer = document.querySelector('.swiper')
+
+  swiperSlides.forEach((slide) => {
+    slide.style.width = ''
+    slide.style.marginRight = ''
+  })
+
+  if (swiperWrapper) {
+    swiperWrapper.style.transform = ''
+    swiperWrapper.style.transitionDuration = ''
+    swiperWrapper.style.width = ''
+  }
+
+  if (swiperContainer) {
+    swiperContainer.style.overflow = ''
+    swiperContainer.style.width = ''
+    swiperContainer.style.height = ''
+  }
+}
+
+function initSwiper() {
+  if (window.innerWidth <= 768) {
+    if (!swiperInstance) {
+      swiperInstance = new Swiper('.swiper', {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 15,
         freeMode: true,
         pagination: {
           el: '.swiper-pagination',
@@ -19,13 +41,23 @@ function swiperCard() {
         }
       })
     }
-  } else if (init) {
-    swiper.destroy()
-    init = false
+  } else {
+    if (swiperInstance) {
+      swiperInstance.destroy(true, true)
+      swiperInstance = null
+      const pagination = document.querySelector('.swiper-pagination')
+      if (pagination) pagination.innerHTML = ''
+      resetSwiperStyles()
+    }
   }
 }
 
-swiperCard()
-window.addEventListener('resize', swiperCard)
+window.addEventListener('resize', function () {
+  initSwiper()
+})
 
-export default swiper
+document.addEventListener('DOMContentLoaded', function () {
+  initSwiper()
+})
+
+export default initSwiper

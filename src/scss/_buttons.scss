@@ -79,11 +79,14 @@
 
 .oval {
   display: flex;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
   background-image: url(../img/oval.svg);
+  background-repeat: no-repeat;
   width: 119px;
   height: 32px;
   border-radius: 16px 0px 0px 0px;
-  transform: translate(105px, -45px);
   justify-content: space-evenly;
   align-items: center;
 }
@@ -92,4 +95,11 @@
   background-image: url(../img/white-arrow.svg);
   width: 7px;
   height: 9.63px;
+}
+
+@media (min-width: 768px) {
+  .oval {
+    margin-right: 16px;
+    align-self: center;
+  }
 }
