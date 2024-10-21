@@ -1,0 +1,76 @@
+.burger-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 15px;
+  overflow-y: scroll;
+  height: 55vh;
+  margin-top: 40px;
+}
+
+.burger-nav__element {
+  display: flex;
+  text-decoration: none;
+  padding-top: 5px;
+}
+
+.burger-nav__element:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 32px;
+  background-color: $nav-hover;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.burger-nav__element:hover {
+  opacity: 0.5;
+  transition-timing-function: ease;
+  transition-duration: 1s;
+}
+
+.phone {
+  position: relative;
+  left: -1px;
+  top: 2px;
+}
+
+.message {
+  position: relative;
+  top: 3px;
+}
+
+.call {
+  font-family: 'TTLakes', sans-serif;
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+  padding-left: 15px;
+  font-weight: 900;
+}
+
+.mail {
+  font-weight: 600;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+.language {
+  font-size: 16px;
+  font-family: 'TTLakes-thin', sans-serif;
+  font-weight: 700;
+  padding-left: 15px;
+  margin-top: 40px;
+}
+
+.language a {
+  margin-right: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.language .active-lang {
+  color: #7e7e82;
+}

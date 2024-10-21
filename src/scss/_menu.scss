@@ -49,17 +49,17 @@
   }
 }
 
-.text-left {
-  max-width: 430px;
-}
-
 .content-768 {
   display: none;
 }
 
+.text-left {
+  max-width: 430px;
+}
+
 @media (min-width: 768px) {
   .content-768 {
-    display: flex !important;
+    display: flex;
   }
 
   .company,
@@ -114,4 +114,15 @@
       align-self: center;
     }
   }
+
+  .logo {
+    min-width: 360px;
+    min-height: 208px;
+  }
+}
+
+.logo {
+  width: 100%;
+  margin-top: 15px;
+  margin-left: -15px;
 }

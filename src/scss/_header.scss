@@ -5,6 +5,7 @@
   background-color: $white;
   padding-left: 15px;
   padding-right: 15px;
+  gap: 10px;
   flex-wrap: nowrap;
   justify-content: space-between;
 
@@ -27,13 +28,16 @@
 }
 
 .burger {
-  display: flex;
+  display: none;
   position: relative;
   z-index: 50;
   align-items: center;
-  width: 30px;
-  height: 18px;
+  width: 40px;
+  height: 40px;
   padding-left: 10px;
+  background-image: url(../img/pink-round.svg);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
 
   span {
     height: 2px;
@@ -50,7 +54,7 @@
   width: 18px;
   background-color: $white;
   transition: all 0.3s ease 0s;
-  top: 0;
+  top: 27%;
 }
 
 .burger::after {
@@ -60,7 +64,7 @@
   width: 14px;
   background-color: $white;
   transition: all 0.3s ease 0s;
-  bottom: 0;
+  bottom: 27%;
 }
 
 .burger.active span {
@@ -70,36 +74,20 @@
 .burger.active::before {
   top: 50%;
   transform: rotate(-45deg) translate(0, -50%);
+  width: 20px;
 }
 
 .burger.active::after {
   bottom: 50%;
   transform: rotate(45deg) translate(0, 50%);
+  width: 20px;
 }
 
-.burger-menu {
-  display: none;
-  flex-direction: column;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.top-layer {
   z-index: 50;
-  overflow-y: auto;
-  padding: 50px 40px;
-  background-color: aquamarine;
-  animation: burgerAnimation 0.4s;
 }
 
-.burger-menu {
-  flex-direction: column;
-  row-gap: 30px;
-}
-
-.hide-content {
+.burger-hide {
   display: none;
 }
 
@@ -112,12 +100,54 @@
   }
 }
 
-@media (min-width: 1360px) {
-  .burger {
-    display: none;
+.right-position {
+  position: absolute;
+  right: 15px;
+  top: 23.5px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    .burger-menu {
+      width: 320px;
+    }
+  }
+
+  .right-position {
+    position: absolute;
+    left: 310px;
+    top: 23.5px;
   }
 }
 
-.open {
-  display: flex !important;
+@media (max-width: 1360px) {
+  .burger {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: none;
+    position: fixed;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 49;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: $white;
+    animation: burgerAnimation 0.4s;
+
+    ul {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+
+  .open {
+    display: flex !important;
+  }
 }

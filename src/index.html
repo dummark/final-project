@@ -15,35 +15,54 @@
   </head>
   <body>
     <header class="header">
-      <div class="circle padding">
-        <div class="burger hover-opacity">
-          <span></span>
-        </div>
+      <div class="hover-opacity burger">
+        <span></span>
       </div>
-      <div><img src="./img/separator.svg" alt="разделитель"/></div>
-      <div><img src="./img/cps.svg" alt="лого компании" /></div>
-      <div class="spacer content-768"></div>
+      <div><img src="./img/separator.svg" alt="разделитель" /></div>
+      <div class="top-layer"
+        ><img src="./img/cps.svg" alt="лого компании"
+      /></div>
+      <div class="spacer"></div>
+      <div class="burger-hide top-layer circle right-position">
+        <div class="circle__loop hover-opacity"></div>
+      </div>
+      <div class="circle content-768">
+        <div class="circle__phone hover-opacity"></div>
+      </div>
+      <div class="circle content-768">
+        <div class="circle__message hover-opacity"></div>
+      </div>
+      <div class="circle content-768">
+        <div class="circle__person hover-opacity"></div>
+      </div>
+      <div class="content-768"
+        ><img src="./img/separator.svg" alt="разделитель"
+      /></div>
       <nav class="burger-menu">
-        <ul>
-          <li class="hide-content">Ремонт техники</li>
-          <li class="hide-content">Услуги и сервисы</li>
-          <li class="hide-content">Корпоративным клиентам</li>
-          <li class="hide-content">Продавцам техники</li>
-          <li class="hide-content">Партнерам</li>
-          <li class="hide-content">Производителям</li>
-          <li class="hide-content">Наши сервисные центры</li>
-          <li class="hide-content">Контакты</li>
-          <div class="circle content-768">
-            <div class="circle__phone hover-opacity"></div>
-          </div>
-          <div class="circle content-768">
-            <div class="circle__message hover-opacity"></div>
-          </div>
-          <div class="circle content-768">
-            <div class="circle__person hover-opacity"></div>
-          </div>
-          <div><img src="./img/separator.svg" alt="разделитель"/></div>
+        <ul class="burger-nav list-font">
+          <li class="burger-nav__element"><a href="#">Ремонт техники</a></li>
+          <li class="burger-nav__element"><a href="#">Услуги и сервисы</a></li>
+          <li class="burger-nav__element"
+            ><a href="#">Корпоративным клиентам</a></li
+          >
+          <li class="burger-nav__element"><a href="#">Продавцам техники</a></li>
+          <li class="burger-nav__element"><a href="#">Партнерам</a></li>
+          <li class="burger-nav__element"><a href="#">Производителям</a></li>
+          <li class="burger-nav__element"
+            ><a href="#">Наши сервисные центры</a></li
+          >
+          <li class="burger-nav__element"><a href="#">Контакты</a></li>
         </ul>
+        <div class="circle">
+          <div class="circle__phone hover-opacity"></div>
+        </div>
+        <div class="circle">
+          <div class="circle__message hover-opacity"></div>
+        </div>
+        <div class="circle">
+          <div class="circle__person hover-opacity"></div>
+        </div>
+        <div><img src="./img/separator.svg" alt="разделитель" /></div>
       </nav>
       <div class="circle">
         <div class="circle__settings hover-opacity"></div>
@@ -62,7 +81,7 @@
         />
         <h1 class="head-font">Услуги и сервисы</h1>
       </div>
-      <ul class="header-list list-font">
+      <ul class="website-nav list-font">
         <li><a href="#">Ремонтируемые бренды</a></li>
         <li><a href="#">Ремонтируемые устройства</a></li>
         <li><a href="#">Цены на услуги</a></li>
@@ -71,25 +90,28 @@
         <li><a href="#">Отзывы</a></li>
       </ul>
       <article class="article">
-        <h2 class="main-font">
-          Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-          Только у нас вы можете отремонтировать свой ноутбук Dell с официальной
-          гарантией производителя.
-          <span class="content hidden"
-            >Мы успешно работаем с 1992 года и заслужили репутацию надежного
-            партнера<span
-              >, что подтверждает большое количество постоянных клиентов. Мы
-              гордимся тем, что к нам обращаются по рекомендациям и, в свою
-              очередь, советуют нас родным и близким.</span
-            ></span
+        <div class="article__text">
+          <h2 class="main-font">
+            Мы являемся авторизованным сервисным центром по ремонту техники
+            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+            официальной гарантией производителя.
+            <span class="content hidden"
+              >Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера<span
+                >, что подтверждает большое количество постоянных клиентов. Мы
+                гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                очередь, советуют нас родным и близким.</span
+              >
+            </span>
+          </h2>
+          <button class="toggle-btn black-font">
+            <img src="/src/img/arrows.svg" alt="Читать далее" />
+            Читать далее</button
           >
-        </h2>
-        <button class="toggle-btn black-font">
-          <img src="/src/img/arrows.svg" alt="Читать далее" />
-          Читать далее</button
-        >
+        </div>
         <img class="logo" src="img/cps logo.jpg" alt="вывеска компании" />
-      </article class='article'>
+      </article>
+
       <div class="swiper-name">
         <h1 class="uppercase gray-font">Ремонт техники различных брендов</h1>
       </div>
@@ -165,21 +187,23 @@
         <div class="swiper-pagination"></div>
       </div>
       <div class="hide">
-				<button class="toggleButton black-font" onclick="changeImage()">
-          <img class="arrows" src="img/arrows.svg" alt="Показать всё"/>
-					Показать все
-				</button>
-			</div>
+        <button class="toggleButton black-font" onclick="changeImage()">
+          <img class="arrows" src="img/arrows.svg" alt="Показать всё" />
+          Показать все
+        </button>
+      </div>
       <div class="swiper-name">
         <h1 class="uppercase gray-font">Ремонт различных видов техники</h1>
       </div>
       <div class="swiper swiper-services">
         <div class="swiper-wrapper black-font">
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <div class="service-block">
               Ремонт ноутбуков
               <a href="#">
-                <div class="button-circle button-circle--down hover-opacity"></div>
+                <div
+                  class="button-circle button-circle--down hover-opacity"
+                ></div>
               </a>
             </div>
           </div>
@@ -187,7 +211,9 @@
             <div class="service-block">
               Ремонт планшетов
               <a href="#">
-                <div class="button-circle button-circle--down hover-opacity"></div>
+                <div
+                  class="button-circle button-circle--down hover-opacity"
+                ></div>
               </a>
             </div>
           </div>
@@ -195,7 +221,9 @@
             <div class="service-block">
               Ремонт ПК
               <a href="#">
-                <div class="button-circle button-circle--down hover-opacity"></div>
+                <div
+                  class="button-circle button-circle--down hover-opacity"
+                ></div>
               </a>
             </div>
           </div>
@@ -203,7 +231,9 @@
             <div class="service-block">
               Ремонт мониторов
               <a href="#">
-                <div class="button-circle button-circle--down hover-opacity"></div>
+                <div
+                  class="button-circle button-circle--down hover-opacity"
+                ></div>
               </a>
             </div>
           </div>
@@ -211,7 +241,9 @@
             <div class="service-block">
               Ремонт пейджеров
               <a href="#">
-                <div class="button-circle button-circle--down hover-opacity"></div>
+                <div
+                  class="button-circle button-circle--down hover-opacity"
+                ></div>
               </a>
             </div>
           </div>
@@ -219,7 +251,9 @@
             <div class="service-block">
               Ремонт таксофонов
               <a href="#">
-                <div class="button-circle button-circle--down hover-opacity"></div>
+                <div
+                  class="button-circle button-circle--down hover-opacity"
+                ></div>
               </a>
             </div>
           </div>
@@ -227,7 +261,9 @@
             <div class="service-block">
               Ремонт граммофонов
               <a href="#">
-                <div class="button-circle button-circle--down hover-opacity"></div>
+                <div
+                  class="button-circle button-circle--down hover-opacity"
+                ></div>
               </a>
             </div>
           </div>
@@ -235,7 +271,9 @@
             <div class="service-block">
               Ремонт крыш
               <a href="#">
-                <div class="button-circle button-circle--down hover-opacity"></div>
+                <div
+                  class="button-circle button-circle--down hover-opacity"
+                ></div>
               </a>
             </div>
           </div>
@@ -244,11 +282,11 @@
       </div>
       <!-- кнопка не работает , доделать-->
       <div class="hide">
-				<button class="toggleButton black-font" onclick="changeImage()">
-          <img class="arrows" src="img/arrows.svg" alt="Показать всё"/>
-					Показать все
-				</button>
-			</div>
+        <button class="toggleButton black-font" onclick="changeImage()">
+          <img class="arrows" src="img/arrows.svg" alt="Показать всё" />
+          Показать все
+        </button>
+      </div>
       <div class="swiper-name">
         <h1 class="uppercase gray-font">Цены на услуги</h1>
       </div>
@@ -269,7 +307,7 @@
                 <div class="oval__link"></div>
               </div>
             </div>
-<!-- доделать разделитель для слайдов-->
+            <!-- доделать разделитель для слайдов-->
           </div>
           <div class="swiper-slide">
             <div class="price-block main-font">
@@ -284,7 +322,9 @@
           </div>
           <div class="swiper-slide">
             <div class="price-block main-font">
-              <div class="price-block__service">Замена полифонического динамика</div>
+              <div class="price-block__service"
+                >Замена полифонического динамика</div
+              >
               <div class="price-block__price">1 000 ₽</div>
               <div class="price-block__term">30-120 мин</div>
               <div class="oval">
@@ -295,7 +335,9 @@
           </div>
           <div class="swiper-slide">
             <div class="price-block main-font">
-              <div class="price-block__service">Тестирование с выдачей технического заключения</div>
+              <div class="price-block__service"
+                >Тестирование с выдачей технического заключения</div
+              >
               <div class="price-block__price">1 000 ₽</div>
               <div class="price-block__term">30-120 мин</div>
               <div class="oval">
@@ -306,7 +348,9 @@
           </div>
           <div class="swiper-slide">
             <div class="price-block main-font">
-              <div class="price-block__service">Замена программного обеспечения</div>
+              <div class="price-block__service"
+                >Замена программного обеспечения</div
+              >
               <div class="price-block__price">1 000 ₽</div>
               <div class="price-block__term">30-120 мин</div>
               <div class="oval">
@@ -319,10 +363,16 @@
         <div class="swiper-pagination"></div>
       </div>
       <article class="article text-left">
-        <h2 class="optional-font ">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</h2>
-        <div class="inline-block"><a href="#" class="black-font">Получить коммерческое предложение</a> 
-        <img src="img/pink-arrow.svg"></div>
-        </article>
+        <h2 class="optional-font"
+          >Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+          услугу. Для получения коммерческого предложения на постоянное
+          обслуживание, оставьте заявку.</h2
+        >
+        <div class="inline-block"
+          ><a href="#" class="black-font">Получить коммерческое предложение</a>
+          <img src="img/pink-arrow.svg"
+        /></div>
+      </article>
     </main>
     <footer class="footer small-gray-font">
       <div>© 2019 CPS</div>
@@ -330,10 +380,12 @@
       <p></p>
       <div>Политика конфиденциальности</div>
       <p></p>
-      <div>Информация, размещенная на данной странице, не является публичной офертой</div>
+      <div
+        >Информация, размещенная на данной странице, не является публичной
+        офертой</div
+      >
     </footer>
     <script type="module" src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
-

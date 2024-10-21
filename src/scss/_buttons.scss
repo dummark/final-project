@@ -5,16 +5,17 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-}
-
-.circle,
-.circle__burger,
-.circle__settings,
-.circle__search,
-.circle__phone,
-.circle__message,
-.circle__person {
   background-repeat: no-repeat;
+
+  &__burger,
+  &__settings,
+  &__search,
+  &__phone,
+  &__message,
+  &__person,
+  &__loop {
+    background-repeat: no-repeat;
+  }
 }
 
 .circle__burger {
@@ -53,6 +54,12 @@
   height: 18px;
 }
 
+.circle__loop {
+  background-image: url(/src/img/find.svg);
+  width: 17px;
+  height: 17px;
+}
+
 .button-circle {
   display: flex;
   background-image: url(../img/round-button.svg);
@@ -66,7 +73,7 @@
   transform: translateY(90px);
 }
 
-.toggle-btn {
+.article .toggle-btn {
   margin-left: 15px;
   margin-top: 15px;
   border: 0;

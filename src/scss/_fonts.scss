@@ -40,9 +40,17 @@
   font-size: 16px;
   letter-spacing: -0px;
 
-  a {
+  a,
+  a:hover {
     text-decoration: none;
     color: $gray-7e;
+  }
+}
+
+.list-font.burger-nav {
+  a {
+    color: $black;
+    font-weight: 800;
   }
 }
 

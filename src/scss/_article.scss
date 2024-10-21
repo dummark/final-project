@@ -1,14 +1,22 @@
 .article {
   padding: 15px;
-
-  .logo {
-    width: 100%;
-    margin-top: 15px;
-    margin-left: -15px;
-  }
+  display: flex;
+  flex-wrap: wrap;
 
   .inline-block {
     display: inline-block;
     align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .article {
+    flex-wrap: nowrap;
+    gap: 15px;
+
+    &__text {
+      min-width: 40%;
+      max-width: 60%;
+    }
   }
 }
