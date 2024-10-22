@@ -54,7 +54,8 @@
   }
 }
 
-.black-font {
+.black-font,
+.black-font a {
   font-family: 'TTLakes-Medium', sans-serif;
   text-decoration: none;
   color: $black;
@@ -93,4 +94,13 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.2px;
+}
+
+.phone-font {
+  font-family: 'TTLakes-Bold';
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  text-decoration: none;
+  color: $black;
 }

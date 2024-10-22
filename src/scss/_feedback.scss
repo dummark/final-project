@@ -1,0 +1,88 @@
+.feedback-form {
+  display: flex;
+  width: 320px;
+  position: fixed;
+  flex-wrap: wrap;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  overflow-y: auto;
+  background-color: $white;
+}
+
+.feedback-form__title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  right: 46px;
+}
+
+.feedback-form__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: center;
+  width: 320px;
+  gap: 15px;
+  padding: 15px;
+}
+
+.feedback-form__item {
+  width: 100%;
+}
+
+.feedback-form__label {
+  color: $gray-7e;
+  position: relative;
+  left: 12px;
+  top: 37px;
+  color: $submit-color;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.feedback-form__input {
+  height: 28px;
+  width: 90%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid $white-gray;
+  background-color: $white;
+}
+
+input:focus,
+textarea:focus {
+  border-color: $gray-7e;
+  outline: none;
+}
+
+.feedback-form__item:focus + .feedback-form__label,
+textarea:focus + .feedback-form__label {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.feedback-form__input:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  height: 98px;
+  width: 90%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid $white-gray;
+}
+
+.formName {
+}
+
+.formPhone {
+}
+
+.formEmail {
+}

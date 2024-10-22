@@ -13,29 +13,31 @@
     />
     <title>CPS</title>
   </head>
-  <body>
+  <body id="body">
     <header class="header">
       <div class="hover-opacity burger">
         <span></span>
       </div>
-      <div><img src="./img/separator.svg" alt="разделитель" /></div>
-      <div class="top-layer"
+      <div class="hide-1366"
+        ><img src="./img/separator.svg" alt="разделитель"
+      /></div>
+      <div class="header-logo"
         ><img src="./img/cps.svg" alt="лого компании"
       /></div>
       <div class="spacer"></div>
       <div class="burger-hide top-layer circle right-position">
         <div class="circle__loop hover-opacity"></div>
       </div>
-      <div class="circle content-768">
+      <div class="circle show-768 hide-1366 callback">
         <div class="circle__phone hover-opacity"></div>
       </div>
-      <div class="circle content-768">
+      <div class="circle show-768 hide-1366 feedback">
         <div class="circle__message hover-opacity"></div>
       </div>
-      <div class="circle content-768">
+      <div class="circle show-768 hide-1366">
         <div class="circle__person hover-opacity"></div>
       </div>
-      <div class="content-768"
+      <div class="show-768 hide-1366"
         ><img src="./img/separator.svg" alt="разделитель"
       /></div>
       <nav class="burger-menu">
@@ -53,22 +55,94 @@
           >
           <li class="burger-nav__element"><a href="#">Контакты</a></li>
         </ul>
-        <div class="circle">
-          <div class="circle__phone hover-opacity"></div>
+        <div class="burger-menu__footer position-1366">
+          <div class="burger-menu__icons"
+            ><div class="circle callback">
+              <div class="circle__phone hover-opacity"></div>
+            </div>
+            <div class="circle feedback">
+              <div class="circle__message hover-opacity"></div>
+            </div>
+            <div class="circle">
+              <div class="circle__person hover-opacity"></div>
+            </div>
+          </div>
+          <a class="mail black-font" href="mailto:mail@cps.com">mail@cps.com</a>
+          <a class="call phone-font" href="tel:88008908900">8 800 890 8900</a>
+          <div class="language black-font">
+            <a href="#">RU</a>
+            <a href="#">EN</a>
+            <a href="#">CH</a>
+          </div>
         </div>
-        <div class="circle">
-          <div class="circle__message hover-opacity"></div>
-        </div>
-        <div class="circle">
-          <div class="circle__person hover-opacity"></div>
-        </div>
-        <div><img src="./img/separator.svg" alt="разделитель" /></div>
       </nav>
-      <div class="circle">
-        <div class="circle__settings hover-opacity"></div>
+      <div class="application fixed-1366"
+        ><div class="show-1366 black-font">Оставить заявку</div>
+        <div class="circle">
+          <div class="circle__settings hover-opacity"></div>
+        </div>
       </div>
-      <div class="circle">
-        <div class="circle__search hover-opacity"></div>
+      <div class="application fixed-1366"
+        ><div class="show-1366 black-font">Статус ремонта</div>
+        <div class="circle">
+          <div class="circle__search hover-opacity"></div>
+        </div>
+      </div>
+      <div class="feedback-form">
+        <form action="#" id="feedback-form" class="feedback-form__body">
+          <div class="circle">
+            <div class="circle__cancel"></div>
+          </div>
+          <div class="feedback-form__title">
+            <img
+              src="./img/left-element.svg"
+              alt="плашка слева"
+              height="40px"
+              width="4px"
+            />
+            <h1 class="head-font">Обратная связь </h1>
+          </div>
+          <div class="black-font feedback-form__item">
+            <label for="formName" class="feedback-form__label">Имя</label>
+            <input
+              id="formName"
+              type="text"
+              name="name"
+              class="feedback-form__input"
+            />
+          </div>
+          <div class="black-font feedback-form__item">
+            <label for="formPhone" class="feedback-form__label">Телефон</label>
+            <input
+              id="formPhone"
+              type="text"
+              name="phone"
+              class="feedback-form__input"
+            />
+          </div>
+          <div class="feedback-form__item">
+            <label for="formEmail" class="black-font feedback-form__label"
+              >Электронная почта</label
+            >
+            <input
+              id="formEmail"
+              type="text"
+              name="email"
+              class="feedback-form__input"
+            />
+          </div>
+          <div class="black-font feedback-form__item">
+            <label for="formMessage" class="feedback-form__label"
+              >Сообщение</label
+            >
+            <textarea name="message" id="formMessage"></textarea>
+          </div>
+          <div class="black-font"
+            >Нажимая “отправить”, вы даете согласие на обработку персональных
+            данных и соглашаетесь с нашей политикой конфиденциальности
+          </div>
+          <button type="submit" class="oval">Отправить</button>
+        </form>
       </div>
     </header>
     <main>
@@ -105,7 +179,7 @@
             </span>
           </h2>
           <button class="toggle-btn black-font">
-            <img src="/src/img/arrows.svg" alt="Читать далее" />
+            <img class="img" src="/src/img/arrows.svg" alt="Читать далее" />
             Читать далее</button
           >
         </div>
@@ -187,7 +261,7 @@
         <div class="swiper-pagination"></div>
       </div>
       <div class="hide">
-        <button class="toggleButton black-font" onclick="changeImage()">
+        <button class="companiesButton black-font" onclick="changeImage()">
           <img class="arrows" src="img/arrows.svg" alt="Показать всё" />
           Показать все
         </button>
@@ -282,8 +356,8 @@
       </div>
       <!-- кнопка не работает , доделать-->
       <div class="hide">
-        <button class="toggleButton black-font" onclick="changeImage()">
-          <img class="arrows" src="img/arrows.svg" alt="Показать всё" />
+        <button class="servicesButton black-font" onclick="changeImage()">
+          <img class="arrows-2" src="img/arrows.svg" alt="Показать всё" />
           Показать все
         </button>
       </div>

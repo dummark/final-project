@@ -13,7 +13,8 @@
   &__phone,
   &__message,
   &__person,
-  &__loop {
+  &__loop,
+  &__cancel {
     background-repeat: no-repeat;
   }
 }
@@ -58,6 +59,12 @@
   background-image: url(/src/img/find.svg);
   width: 17px;
   height: 17px;
+}
+
+.circle__cancel {
+  background-image: url(/src/img/cancel.svg);
+  width: 16px;
+  height: 16px;
 }
 
 .button-circle {

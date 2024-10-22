@@ -1,6 +1,7 @@
 const burgerButton = document.querySelector('.burger')
 const burgerMenu = document.querySelector('.burger-menu')
 const burgerHide = document.querySelector('.burger-hide')
+const topLayer = document.querySelector('.top-layer')
 
 burgerButton.addEventListener('click', function () {
   this.classList.toggle('active')
