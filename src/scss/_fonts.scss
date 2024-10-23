@@ -26,6 +26,13 @@
   letter-spacing: -0.6px;
 }
 
+.feedback-font {
+  font-family: 'TTLakes-Bold', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
 .main-font {
   font-size: 14px;
   font-family: 'TTLakes-Regular', sans-serif;
@@ -38,7 +45,6 @@
 .list-font {
   font-family: 'TTLakes-Regular', sans-serif;
   font-size: 16px;
-  letter-spacing: -0px;
 
   a,
   a:hover {
@@ -62,6 +68,10 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
+
+  .pink {
+    color: $pink;
+  }
 }
 
 .gray-font {

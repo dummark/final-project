@@ -1,15 +1,30 @@
 .feedback-form {
-  display: flex;
-  width: 320px;
+  display: none;
+  width: 100%;
   position: fixed;
   flex-wrap: wrap;
   height: 100%;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 50;
+  z-index: 100;
   overflow-y: auto;
   background-color: $white;
+
+  .circle {
+    align-self: flex-start;
+
+    &__cancel {
+      position: relative;
+      right: 1px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .feedback-form {
+    width: 440px;
+  }
 }
 
 .feedback-form__title {
@@ -17,7 +32,9 @@
   align-items: center;
   gap: 15px;
   position: relative;
-  right: 46px;
+  align-self: flex-start;
+  margin-left: -15px;
+  margin-top: 65px;
 }
 
 .feedback-form__body {
@@ -25,7 +42,7 @@
   flex-direction: column;
   align-items: center;
   flex-direction: center;
-  width: 320px;
+  width: auto;
   gap: 15px;
   padding: 15px;
 }
@@ -53,23 +70,6 @@
   background-color: $white;
 }
 
-input:focus,
-textarea:focus {
-  border-color: $gray-7e;
-  outline: none;
-}
-
-.feedback-form__item:focus + .feedback-form__label,
-textarea:focus + .feedback-form__label {
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-.feedback-form__input:focus,
-textarea:focus {
-  outline: none;
-}
-
 textarea {
   height: 98px;
   width: 90%;
@@ -78,11 +78,37 @@ textarea {
   border: 1px solid $white-gray;
 }
 
-.formName {
+.submit {
+  position: fixed;
+  right: 15px;
+  top: 600px;
+  border: 0px;
+  background-color: $white;
 }
 
-.formPhone {
+.feedback.active {
+  position: fixed;
+  top: 25px;
+  right: 295px;
+  bottom: 0;
+  z-index: 110;
 }
 
-.formEmail {
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffffe3;
+  z-index: 30;
+}
+
+@media (min-width: 768px) {
+  .feedback.active {
+    position: fixed;
+    right: 480px;
+    top: 22px;
+  }
 }

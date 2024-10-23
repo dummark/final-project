@@ -80,7 +80,7 @@
   transform: translateY(90px);
 }
 
-.article .toggle-btn {
+.article .menuButton {
   margin-left: 15px;
   margin-top: 15px;
   border: 0;
@@ -91,7 +91,7 @@
   }
 }
 
-.oval {
+.oval-button {
   display: flex;
   position: absolute;
   bottom: 16px;
@@ -105,14 +105,14 @@
   align-items: center;
 }
 
-.oval__link {
+.oval-button__link {
   background-image: url(../img/white-arrow.svg);
   width: 7px;
   height: 9.63px;
 }
 
 @media (min-width: 768px) {
-  .oval {
+  .price-block.oval-button {
     margin-right: 16px;
     align-self: center;
   }

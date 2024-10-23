@@ -73,7 +73,7 @@
   .hide {
     display: flex;
     gap: 15px;
-    margin-top: 30px;
+
     align-items: center;
 
     button {
@@ -122,10 +122,3 @@
     min-height: 208px;
   }
 }
-
-/* @media (min-width: 1366px) {
-  .heading {
-    transform: translate(320px, -85px);
-  }
-}
-*/

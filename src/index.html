@@ -88,11 +88,10 @@
           <div class="circle__search hover-opacity"></div>
         </div>
       </div>
+    </header>
+    <main>
       <div class="feedback-form">
         <form action="#" id="feedback-form" class="feedback-form__body">
-          <div class="circle">
-            <div class="circle__cancel"></div>
-          </div>
           <div class="feedback-form__title">
             <img
               src="./img/left-element.svg"
@@ -100,52 +99,60 @@
               height="40px"
               width="4px"
             />
-            <h1 class="head-font">Обратная связь </h1>
+            <h1 class="feedback-font">Обратная связь </h1>
           </div>
-          <div class="black-font feedback-form__item">
-            <label for="formName" class="feedback-form__label">Имя</label>
+          <div class="feedback-form__item">
+            <label for="formName" class="feedback-form__label"></label>
             <input
               id="formName"
               type="text"
-              name="name"
-              class="feedback-form__input"
+              name="formName"
+              class="feedback-form__input black-font"
+              placeholder="Имя"
             />
           </div>
-          <div class="black-font feedback-form__item">
-            <label for="formPhone" class="feedback-form__label">Телефон</label>
+          <div class="feedback-form__item">
+            <label for="formPhone" class="feedback-form__label"></label>
             <input
               id="formPhone"
               type="text"
               name="phone"
-              class="feedback-form__input"
+              class="feedback-form__input black-font"
+              placeholder="Телефон"
             />
           </div>
           <div class="feedback-form__item">
-            <label for="formEmail" class="black-font feedback-form__label"
-              >Электронная почта</label
-            >
+            <label for="formEmail" class="feedback-form__label"></label>
             <input
               id="formEmail"
               type="text"
               name="email"
-              class="feedback-form__input"
+              class="feedback-form__input black-font"
+              placeholder="Электронная почта"
             />
           </div>
-          <div class="black-font feedback-form__item">
-            <label for="formMessage" class="feedback-form__label"
-              >Сообщение</label
-            >
-            <textarea name="message" id="formMessage"></textarea>
+          <div class="feedback-form__item">
+            <label for="formMessage" class="feedback-form__label"></label>
+            <textarea
+              class="black-font"
+              name="message"
+              id="formMessage"
+              placeholder="Сообщение"
+            ></textarea>
           </div>
           <div class="black-font"
-            >Нажимая “отправить”, вы даете согласие на обработку персональных
-            данных и соглашаетесь с нашей политикой конфиденциальности
+            >Нажимая “отправить”, вы даете согласие на
+            <span class="pink">обработку персональных данных</span> и
+            соглашаетесь с
+            <span class="pink">нашей политикой конфиденциальности</span>
           </div>
-          <button type="submit" class="oval">Отправить</button>
+          <button type="submit" class="oval-button submit white-link uppercase"
+            ><a href="#" class="white-link uppercase">Отправить</a>
+            <div class="oval-button__link"></div
+          ></button>
         </form>
       </div>
-    </header>
-    <main>
+
       <div class="heading">
         <img
           src="./img/left-element.svg"
@@ -178,8 +185,8 @@
               >
             </span>
           </h2>
-          <button class="toggle-btn black-font">
-            <img class="img" src="/src/img/arrows.svg" alt="Читать далее" />
+          <button class="menuButton black-font">
+            <img src="/src/img/arrows.svg" alt="Читать далее" />
             Читать далее</button
           >
         </div>
@@ -261,7 +268,7 @@
         <div class="swiper-pagination"></div>
       </div>
       <div class="hide">
-        <button class="companiesButton black-font" onclick="changeImage()">
+        <button class="companiesButton black-font hide">
           <img class="arrows" src="img/arrows.svg" alt="Показать всё" />
           Показать все
         </button>
@@ -354,21 +361,20 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <!-- кнопка не работает , доделать-->
       <div class="hide">
         <button class="servicesButton black-font" onclick="changeImage()">
-          <img class="arrows-2" src="img/arrows.svg" alt="Показать всё" />
+          <img src="img/arrows.svg" alt="Показать всё" />
           Показать все
         </button>
       </div>
       <div class="swiper-name">
         <h1 class="uppercase gray-font">Цены на услуги</h1>
       </div>
-      <!-- понять что с этой хренью делать <div class="width-768">
-        <div class="price-block__service"></div>
-        <div class="price-block__price"></div>
-        <div class="price-block__term"></div>
-      </div> -->
+      <div class="show-768 gray-font">
+        <div>Ремонтные услуги</div>
+        <div>Цена</div>
+        <div>Срок</div>
+      </div>
       <div class="swiper swiper-prices">
         <div class="swiper-wrapper main-font">
           <div class="swiper-slide">
@@ -376,9 +382,9 @@
               <div class="price-block__service">Диагностика</div>
               <div class="price-block__price">Бесплатно</div>
               <div class="price-block__term">30 мин</div>
-              <div class="oval hover-opacity">
+              <div class="oval-button hover-opacity">
                 <a href="#" class="white-link uppercase">Заказать</a>
-                <div class="oval__link"></div>
+                <div class="oval-button__link"></div>
               </div>
             </div>
             <!-- доделать разделитель для слайдов-->
@@ -388,9 +394,9 @@
               <div class="price-block__service">Замена дисплея</div>
               <div class="price-block__price">1 000 ₽</div>
               <div class="price-block__term">30-120 мин</div>
-              <div class="oval">
+              <div class="oval-button">
                 <a href="#" class="white-link uppercase">Заказать</a>
-                <div class="oval__link"></div>
+                <div class="oval-button__link"></div>
               </div>
             </div>
           </div>
@@ -401,9 +407,9 @@
               >
               <div class="price-block__price">1 000 ₽</div>
               <div class="price-block__term">30-120 мин</div>
-              <div class="oval">
+              <div class="oval-button">
                 <a href="#" class="white-link uppercase">Заказать</a>
-                <div class="oval__link"></div>
+                <div class="oval-button__link"></div>
               </div>
             </div>
           </div>
@@ -414,9 +420,9 @@
               >
               <div class="price-block__price">1 000 ₽</div>
               <div class="price-block__term">30-120 мин</div>
-              <div class="oval">
+              <div class="oval-button">
                 <a href="#" class="white-link uppercase">Заказать</a>
-                <div class="oval__link"></div>
+                <div class="oval-button__link"></div>
               </div>
             </div>
           </div>
@@ -427,9 +433,9 @@
               >
               <div class="price-block__price">1 000 ₽</div>
               <div class="price-block__term">30-120 мин</div>
-              <div class="oval">
+              <div class="oval-button">
                 <a href="#" class="white-link uppercase">Заказать</a>
-                <div class="oval__link"></div>
+                <div class="oval-button__link"></div>
               </div>
             </div>
           </div>

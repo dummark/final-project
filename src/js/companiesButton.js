@@ -1,19 +1,17 @@
 const companiesButton = document.querySelector('.companiesButton')
 const swiperHeight = document.querySelectorAll('.swiper-companies')
-const arrows = document.querySelector('.arrows')
 
 companiesButton.addEventListener('click', () => {
   swiperHeight.forEach((item) => {
-    if (companiesButton.textContent == 'Скрыть') {
+    if (companiesButton.textContent.includes('Скрыть')) {
       item.style.height = '170px'
-      companiesButton.textContent = 'Показать все'
-      arrows.src = 'img/arrows.svg'
+      companiesButton.innerHTML =
+        '<img src="img/arrows.svg" alt="Показать всё"> Показать все'
     } else {
       item.style.height = 'auto'
-      companiesButton.textContent = 'Скрыть'
-      arrows.src = 'img/arrowsreverse.svg'
+      companiesButton.innerHTML =
+        '<img src="img/arrowsreverse.svg" alt="Скрыть всё"> Скрыть'
     }
   })
 })
-
 export default companiesButton

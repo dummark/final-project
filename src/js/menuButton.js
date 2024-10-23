@@ -1,18 +1,15 @@
-const toggleBtn = document.querySelector('.toggle-btn')
+const menuButton = document.querySelector('.menuButton')
 const content = document.querySelector('.content')
-const img = document.querySelector('img')
 
-toggleBtn.addEventListener('click', () => {
+menuButton.addEventListener('click', () => {
   content.classList.toggle('hidden')
   if (content.classList.contains('hidden')) {
-    toggleBtn.textContent = 'Читать далее'
-    img.src = './img/arrows.svg'
-    img.alt = 'Показать'
+    menuButton.innerHTML =
+      '<img src="./img/arrows.svg" alt="Показать"> Читать далее'
   } else {
-    toggleBtn.textContent = 'Скрыть'
-    img.src = '.img/arrowsreverse.svg'
-    img.alt = 'Скрыть'
+    menuButton.innerHTML =
+      '<img src="./img/arrowsreverse.svg" alt="Скрыть"> Скрыть'
   }
 })
 
-export default toggleBtn
+export default menuButton
