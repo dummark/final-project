@@ -7,7 +7,7 @@ const personHide = document.querySelector('.person')
 overlay.classList.add('overlay')
 document.body.appendChild(overlay)
 
-feedbackButton.addEventListener('click', function () {
+function toggleFeedbackForm() {
   feedbackButton.classList.toggle('active')
   feedbackForm.classList.toggle('open')
 
@@ -19,20 +19,19 @@ feedbackButton.addEventListener('click', function () {
 
   if (feedbackForm.classList.contains('open') && window.innerWidth < 768) {
     callbackHide.style.display = 'none'
-  } else {
-    callbackHide.style.display = 'flex'
-  }
-
-  if (feedbackForm.classList.contains('open') && window.innerWidth < 768) {
     personHide.style.display = 'none'
   } else {
+    callbackHide.style.display = 'flex'
     personHide.style.display = 'flex'
   }
-})
+}
+
+feedbackButton.addEventListener('click', toggleFeedbackForm)
 
 overlay.addEventListener('click', function () {
-  feedbackForm.classList.remove('open')
-  overlay.style.display = 'none'
+  if (feedbackForm.classList.contains('open')) {
+    toggleFeedbackForm()
+  }
 })
 
 export default feedbackButton

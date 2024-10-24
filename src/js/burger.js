@@ -2,17 +2,17 @@ const burgerButton = document.querySelector('.burger')
 const burgerMenu = document.querySelector('.burger-menu')
 const burgerHide = document.querySelector('.burger-hide')
 const burgerElements = document.querySelector('.burger-elements')
-const overlay = document.createElement('div')
 
+const overlay = document.createElement('div')
 overlay.classList.add('overlay')
 document.body.appendChild(overlay)
 
-burgerButton.addEventListener('click', function () {
-  this.classList.toggle('active')
+function toggleMenu() {
+  burgerButton.classList.toggle('active')
   burgerElements.classList.toggle('active')
   burgerMenu.classList.toggle('open')
 
-  if (feedbackForm.classList.contains('open')) {
+  if (burgerMenu.classList.contains('open')) {
     overlay.style.display = 'block'
   } else {
     overlay.style.display = 'none'
@@ -22,6 +22,14 @@ burgerButton.addEventListener('click', function () {
     burgerHide.classList.remove('burger-hide')
   } else {
     burgerHide.classList.add('burger-hide')
+  }
+}
+
+burgerButton.addEventListener('click', toggleMenu)
+
+overlay.addEventListener('click', function () {
+  if (burgerMenu.classList.contains('open')) {
+    toggleMenu()
   }
 })
 
