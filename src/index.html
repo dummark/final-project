@@ -28,14 +28,16 @@
       <div class="burger-hide top-layer circle right-position">
         <div class="circle__loop hover-opacity"></div>
       </div>
-      <div class="circle show-768 hide-1366 callback">
-        <div class="circle__phone hover-opacity"></div>
-      </div>
-      <div class="circle show-768 hide-1366 feedback">
-        <div class="circle__message hover-opacity"></div>
-      </div>
-      <div class="circle show-768 hide-1366">
-        <div class="circle__person hover-opacity"></div>
+      <div class="burger-elements show-768">
+        <div class="circle callback">
+          <div class="circle__phone hover-opacity"></div>
+        </div>
+        <div class="circle feedback">
+          <div class="circle__message hover-opacity"></div>
+        </div>
+        <div class="circle person">
+          <div class="circle__person hover-opacity"></div>
+        </div>
       </div>
       <div class="show-768 hide-1366"
         ><img src="./img/separator.svg" alt="разделитель"
@@ -56,17 +58,6 @@
           <li class="burger-nav__element"><a href="#">Контакты</a></li>
         </ul>
         <div class="burger-menu__footer position-1366">
-          <div class="burger-menu__icons"
-            ><div class="circle callback">
-              <div class="circle__phone hover-opacity"></div>
-            </div>
-            <div class="circle feedback">
-              <div class="circle__message hover-opacity"></div>
-            </div>
-            <div class="circle">
-              <div class="circle__person hover-opacity"></div>
-            </div>
-          </div>
           <a class="mail black-font" href="mailto:mail@cps.com">mail@cps.com</a>
           <a class="call phone-font" href="tel:88008908900">8 800 890 8900</a>
           <div class="language black-font">
@@ -146,13 +137,49 @@
             соглашаетесь с
             <span class="pink">нашей политикой конфиденциальности</span>
           </div>
-          <button type="submit" class="oval-button submit white-link uppercase"
+          <button
+            type="submit"
+            class="oval-button feedback-submit white-link uppercase"
             ><a href="#" class="white-link uppercase">Отправить</a>
             <div class="oval-button__link"></div
           ></button>
         </form>
       </div>
-
+      <div class="callback-form">
+        <form action="#" id="callback-form" class="callback-form__body">
+          <div class="callback-form__title">
+            <img
+              src="./img/left-element.svg"
+              alt="плашка слева"
+              height="40px"
+              width="4px"
+            />
+            <h1 class="feedback-font">Заказать звонок </h1>
+          </div>
+          <div class="callback-form__item">
+            <label for="formPhone" class="callback-form__label"></label>
+            <input
+              id="formName"
+              type="text"
+              name="formPhone"
+              class="callback-form__input black-font"
+              placeholder="Телефон"
+            />
+          </div>
+          <div class="black-font"
+            >Нажимая “отправить”, вы даете согласие на
+            <span class="pink">обработку персональных данных</span> и
+            соглашаетесь с
+            <span class="pink">нашей политикой конфиденциальности</span>
+          </div>
+          <button
+            type="submit"
+            class="oval-button callback-submit white-link uppercase"
+            ><a href="#" class="white-link uppercase">Отправить</a>
+            <div class="oval-button__link"></div
+          ></button>
+        </form>
+      </div>
       <div class="heading">
         <img
           src="./img/left-element.svg"
@@ -196,7 +223,7 @@
       <div class="swiper-name">
         <h1 class="uppercase gray-font">Ремонт техники различных брендов</h1>
       </div>
-      <div class="swiper swiper-companies">
+      <div class="swiper swiper-container swiper-companies">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="company">
@@ -276,7 +303,7 @@
       <div class="swiper-name">
         <h1 class="uppercase gray-font">Ремонт различных видов техники</h1>
       </div>
-      <div class="swiper swiper-services">
+      <div class="swiper swiper-container swiper-services">
         <div class="swiper-wrapper black-font">
           <div class="swiper-slide">
             <div class="service-block">
@@ -370,12 +397,13 @@
       <div class="swiper-name">
         <h1 class="uppercase gray-font">Цены на услуги</h1>
       </div>
-      <div class="show-768 gray-font">
-        <div>Ремонтные услуги</div>
-        <div>Цена</div>
-        <div>Срок</div>
+      <div class="table small-gray-font">
+        <div class="table__service">Ремонтные услуги</div>
+        <div class="table__price">Цена</div>
+        <div class="table__term">Срок</div>
+        <div class="white-space"></div>
       </div>
-      <div class="swiper swiper-prices">
+      <div class="swiper swiper-container swiper-prices">
         <div class="swiper-wrapper main-font">
           <div class="swiper-slide">
             <div class="price-block main-font">
@@ -387,8 +415,8 @@
                 <div class="oval-button__link"></div>
               </div>
             </div>
-            <!-- доделать разделитель для слайдов-->
           </div>
+          <div class="separator show-768"></div>
           <div class="swiper-slide">
             <div class="price-block main-font">
               <div class="price-block__service">Замена дисплея</div>
@@ -400,6 +428,7 @@
               </div>
             </div>
           </div>
+          <div class="separator show-768"></div>
           <div class="swiper-slide">
             <div class="price-block main-font">
               <div class="price-block__service"
@@ -413,6 +442,7 @@
               </div>
             </div>
           </div>
+          <div class="separator show-768"></div>
           <div class="swiper-slide">
             <div class="price-block main-font">
               <div class="price-block__service"
@@ -426,6 +456,7 @@
               </div>
             </div>
           </div>
+          <div class="separator show-768"></div>
           <div class="swiper-slide">
             <div class="price-block main-font">
               <div class="price-block__service"
@@ -442,24 +473,26 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <article class="article text-left">
+      <div class="article text-left">
         <h2 class="optional-font"
           >Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
           услугу. Для получения коммерческого предложения на постоянное
           обслуживание, оставьте заявку.</h2
         >
-        <div class="inline-block"
-          ><a href="#" class="black-font">Получить коммерческое предложение</a>
-          <img src="img/pink-arrow.svg"
-        /></div>
-      </article>
+      </div>
+      <div class="inline"
+        ><a href="#" class="black-font">Получить коммерческое предложение</a>
+        <img src="img/pink-arrow.svg"
+      /></div>
     </main>
     <footer class="footer small-gray-font">
-      <div>© 2019 CPS</div>
-      <div>Разработано командой Apesong</div>
-      <p></p>
+      <div
+        >© 2019 CPS<br />
+        Разработано командой Apesong</div
+      >
+      <p class="hide-768"></p>
       <div>Политика конфиденциальности</div>
-      <p></p>
+      <p class="hide-768"></p>
       <div
         >Информация, размещенная на данной странице, не является публичной
         офертой</div

@@ -1,63 +1,39 @@
 let swiperInstance = null
 
-function resetSwiperStyles() {
-  const swiperSlides = document.querySelectorAll('.swiper-slide')
-  const swiperWrapper = document.querySelector('.swiper-wrapper')
-  const swiperContainer = document.querySelector('.swiper')
-
-  swiperSlides.forEach((slide) => {
-    slide.style.width = ''
-    slide.style.marginRight = ''
+function initSwiper() {
+  swiperInstance = new Swiper('.swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+    freeMode: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true
+    }
   })
-
-  if (swiperWrapper) {
-    swiperWrapper.style.transform = ''
-    swiperWrapper.style.transitionDuration = ''
-    swiperWrapper.style.width = ''
-  }
-
-  if (swiperContainer) {
-    swiperContainer.style.overflow = ''
-    swiperContainer.style.width = ''
-    swiperContainer.style.height = ''
-  }
 }
 
-function initSwiper() {
-  if (window.innerWidth <= 768) {
-    if (!swiperInstance) {
-      swiperInstance = new Swiper('.swiper', {
-        slidesPerView: 'auto',
-        spaceBetween: 15,
-        freeMode: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
-        keyboard: {
-          enabled: true,
-          onlyInViewport: true,
-          pageUpDown: true
-        }
-      })
-    }
-  } else {
+function handleResize() {
+  const screenWidth = window.innerWidth
+
+  if (screenWidth >= 768) {
     if (swiperInstance) {
       swiperInstance.destroy(true, true)
       swiperInstance = null
-      const pagination = document.querySelector('.swiper-pagination')
-      if (pagination) pagination.innerHTML = ''
-      resetSwiperStyles()
+    }
+  } else {
+    if (!swiperInstance) {
+      initSwiper()
     }
   }
 }
 
-window.addEventListener('resize', function () {
-  initSwiper()
-})
+window.addEventListener('resize', handleResize)
 
-document.addEventListener('DOMContentLoaded', function () {
-  initSwiper()
+window.addEventListener('load', () => {
+  handleResize()
 })
-
-export default initSwiper

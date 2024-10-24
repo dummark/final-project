@@ -65,11 +65,16 @@
   display: none;
 }
 
+.table {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .company,
   .service-block {
     width: 224px;
   }
+
   .hide {
     display: flex;
     gap: 15px;
@@ -121,4 +126,47 @@
     min-width: 360px;
     min-height: 208px;
   }
+
+  .table {
+    display: flex;
+    text-align: left;
+    padding-left: 30px;
+    margin-top: 30px;
+
+    &__service {
+      flex-basis: 50%;
+    }
+
+    &__price {
+      flex-basis: 20%;
+    }
+
+    &__term {
+      flex-basis: 30%;
+    }
+
+    .white-space {
+      width: 65px;
+    }
+  }
+}
+
+.text-left {
+  max-width: 430px;
+  margin-left: 15px;
+}
+
+.inline {
+  display: inline-block;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.separator {
+  width: 90%;
+  height: 1px;
+  background-color: $white-gray;
+  z-index: 50;
+  display: flex;
+  align-self: center;
 }

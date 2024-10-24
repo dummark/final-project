@@ -1,4 +1,4 @@
-.feedback-form {
+.callback-form {
   display: none;
   width: 100%;
   position: fixed;
@@ -21,7 +21,7 @@
   }
 }
 
-.feedback-form__title {
+.callback-form__title {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -31,7 +31,7 @@
   margin-top: 65px;
 }
 
-.feedback-form__body {
+.callback-form__body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,11 +41,11 @@
   padding: 15px;
 }
 
-.feedback-form__item {
+.callback-form__item {
   width: 100%;
 }
 
-.feedback-form__label {
+.callback-form__label {
   color: $gray-7e;
   position: relative;
   left: 12px;
@@ -55,7 +55,7 @@
   pointer-events: none;
 }
 
-.feedback-form__input {
+.callback-form__input {
   height: 28px;
   width: 90%;
   padding: 10px;
@@ -72,23 +72,23 @@ textarea {
   border: 1px solid $white-gray;
 }
 
-.feedback-submit {
-  position: fixed;
-  right: 15px;
-  top: 600px;
-  border: 0px;
-  background-color: $white;
-}
-
-.feedback.active {
+.callback.active {
   position: fixed;
   top: 26px;
   z-index: 110;
 
-  .circle__message {
+  .circle__phone {
     background-image: url('../img/cancel.svg');
     position: relative;
   }
+}
+
+.callback-submit {
+  position: fixed;
+  right: 15px;
+  top: 350px;
+  border: 0px;
+  background-color: $white;
 }
 
 .overlay {
@@ -103,12 +103,12 @@ textarea {
 }
 
 @media (min-width: 768px) {
-  .feedback.active {
+  .callback.active {
     position: fixed;
     right: 460px;
   }
 
-  .feedback-form {
+  .callback-form {
     width: 440px;
   }
 }

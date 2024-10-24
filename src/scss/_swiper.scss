@@ -1,9 +1,3 @@
-.swiper-companies {
-}
-
-.swiper-services {
-}
-
 .swiper-prices {
   .swiper-wrapper {
     .swiper-slide {
@@ -13,7 +7,8 @@
 }
 
 .swiper {
-  width: auto;
+  max-width: 100%;
+  margin: 15px;
 
   .swiper-pagination {
     position: static;
@@ -30,9 +25,7 @@
 }
 
 .swiper-wrapper {
-  padding-left: 15px;
   display: flex;
-  padding-right: 15px;
   width: auto;
 
   .swiper-slide {

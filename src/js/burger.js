@@ -1,9 +1,11 @@
 const burgerButton = document.querySelector('.burger')
 const burgerMenu = document.querySelector('.burger-menu')
 const burgerHide = document.querySelector('.burger-hide')
+const burgerElements = document.querySelector('.burger-elements')
 
 burgerButton.addEventListener('click', function () {
   this.classList.toggle('active')
+  burgerElements.classList.toggle('active')
   burgerMenu.classList.toggle('open')
 
   if (burgerHide.classList.contains('burger-hide')) {
